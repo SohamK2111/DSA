@@ -8,6 +8,7 @@ numbers = [random.randint(0,1000) for i in range(10)]
 def mergesort(arr):
     
     if len(arr) > 1:
+        #split the array into two halves
         left_arr = arr[:len(arr)//2]
         right_arr = arr[len(arr)//2:]
     
@@ -44,3 +45,5 @@ def mergesort(arr):
 
 print(numbers)
 print(mergesort(numbers))                
+
+#this has complexity O(nlogn) in all cases.
