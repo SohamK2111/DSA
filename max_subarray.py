@@ -39,4 +39,4 @@ A = [random.randint(-100,100) for i in range(6)]
 print(A)
 print(max_subarray(A, 0, len(A)-1))
 # this returns the minimum and maximum indicies of the subarray and the total sum of the subarray
-# the time complexity of this algorithm is O(nlogn)
+# the time complexity of this algorithm is O(nlogn)A
