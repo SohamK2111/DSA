@@ -50,7 +50,15 @@ class TreeNode:
                 return self.right.find(value)
         else:
             return True
-print(1//2)
+
+
+
+
+dicti = {'a': 1, 'b': 2, 'c': 3}
+if 'a' not in dicti:
+    print('True')
+else:
+    print("False")
 quit()
 tree = TreeNode(10)
 tree.insert(5)

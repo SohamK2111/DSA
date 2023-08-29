@@ -1,22 +1,22 @@
 
-def findRelativeRanks(score):
-    sortedscores = [0]*len(score)
-    a = sorted(score, reverse=True)
-    for i in range(len(a)):
-        if i == 0:
-            sortedscores[i] = "Gold Medal"
-        elif i == 1:
-            sortedscores[i] = "Silver Medal"
-        elif i == 2:
-            sortedscores[i] = "Bronze Medal"
-        else:
-            sortedscores[i] = i+1
-    
-    for i in range(len(score)):
-        score[i] = sortedscores[a.index(score[i])]
-    return score
-    
+def wordPattern(pattern, s):
+    """
+    :type pattern: str
+    :type s: str
+    :rtype: bool
+    """
+    dictionary = {}
+    t = s.split(" ")
+    for i in range(len(pattern)):
+        if pattern[i] not in dictionary and t[i] not in dictionary.values():
+            dictionary[pattern[i]] = t[i] 
+        elif pattern[i] not in dictionary and t[i] in dictionary.values():
+            return False
+        elif pattern[i] in dictionary and dictionary[pattern[i]] != t[i]:
+            return False
+    return True
 
-score = [3,2,4,1,5]
 
-print(findRelativeRanks(score))
+print(wordPattern('abba', 'dog dog dog dog'))
+    
+            
